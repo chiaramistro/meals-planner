@@ -1,0 +1,20 @@
+.ProductsTableSubHeader-text {
+    font-size: small;
+    font-weight: lighter;
+}
+
+.ProductsTable table {
+    margin: 8px;
+    padding: 8px; 
+    background-color: white;
+}
+
+thead {
+    background-color: yellow;
+    margin: 8px;
+} 
+
+.divider {
+    border-bottom: 2px solid grey;
+    margin: 10px 0px;
+}

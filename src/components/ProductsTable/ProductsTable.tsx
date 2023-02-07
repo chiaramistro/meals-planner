@@ -6,8 +6,25 @@ const ProductsTableHeader = (props: {title: string}) => {
   const { title } = props;
 
   return (
+    <tr className="ProductsTableHeader">
+      <td align="center" colSpan={2}><span className='ProductsTableHeader-text'>{title}</span></td>
+    </tr>
+  );
+}
+
+function ProductsTableSubHeader() {
+  return (
+    <tr className="ProductsTableSubHeader">
+      <td align="left"><span className='ProductsTableSubHeader-text'>Name</span></td>
+      <td align="right"><span className='ProductsTableSubHeader-text'>Price</span></td>
+    </tr>
+  );
+}
+
+function ProductsTableDivider() {
+  return (
     <tr>
-      <th align="center">{title}</th>
+      <td align="center" colSpan={2}><div className='divider'></div></td>
     </tr>
   );
 }
@@ -32,6 +49,7 @@ const ProductsTable = (props: TableProps) => {
   categories.forEach(category => {
     const productsInCat = products.filter((prod: Product) => prod.category === category);
     tableContent.push(<ProductsTableHeader title={category} key={category} />)
+    tableContent.push(<ProductsTableSubHeader />)
     productsInCat.forEach((prod: Product) => {
       if (prod.name.indexOf(filterText) === -1) {
         return;
@@ -41,17 +59,20 @@ const ProductsTable = (props: TableProps) => {
       }
       tableContent.push(<ProductRow product={prod} key={prod.name}/>)
     })
+    if (index !== categories.length-1) { // not last one
+      tableContent.push(<ProductsTableDivider />)
+    }
   });
   
   return (
-    <div className="App">
+    <div className="ProductsTable">
      <table width="100%">
-       <thead>
+       {/* <thead>
         <tr>
           <th align="left">Name</th>
           <th align="right">Price</th>
         </tr>
-       </thead>
+       </thead> */}
        <tbody>
         {tableContent}
        </tbody>

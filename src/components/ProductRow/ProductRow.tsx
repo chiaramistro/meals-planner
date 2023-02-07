@@ -8,8 +8,8 @@ const ProductRow = (props: {product: Product}) => {
 
   return (
     <tr>
-      <th align="left">{coloredName}</th>
-      <th align="right">{product.price}</th>
+      <td align="left">{coloredName}</td>
+      <td align="right">{product.price}</td>
     </tr>
   );
 };

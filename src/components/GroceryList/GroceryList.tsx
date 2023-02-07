@@ -11,8 +11,8 @@ const GroceryList = (props: {products: Product[]}) => {
   const { products } = props;
   
   return (
-    <div className="App">
       <SearchBar filterText={filterText} inStockOnly={inStockOnly} />
+    <div className="GroceryList">
       <ProductsTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
     </div>
   );
