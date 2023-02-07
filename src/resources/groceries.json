@@ -1,0 +1,32 @@
+[
+    {
+        "category": "Grains",
+        "name": "Quinoa",
+        "price": "$4.99",
+        "quantity": 2
+    },
+    {
+        "category": "Basics",
+        "name": "Flour",
+        "price": "$1.30",
+        "quantity": 1
+    },
+    {
+        "category": "Sweets",
+        "name": "Biscuits",
+        "price": "$5.00",
+        "quantity": 2
+    },
+    {
+        "category": "Salty",
+        "name": "Vegan Chicken Nuggets",
+        "price": "$3.99",
+        "quantity": 0
+    },
+    {
+        "category": "Basics",
+        "name": "Oil",
+        "price": "$1.30",
+        "quantity": 1
+    }
+]
