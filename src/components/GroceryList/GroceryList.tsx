@@ -10,9 +10,17 @@ const GroceryList = (props: {products: Product[]}) => {
 
   const { products } = props;
   
+  const onFilterTextChange = (text: string) => {
+    setFilterText(text);
+  }
+
+  const onInStockOnlyChange = (inStockOnly: boolean) => {
+    setInStockOnly(inStockOnly);
+  }
+
   return (
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly} />
     <div className="GroceryList">
+      <SearchBar filterText={filterText} inStockOnly={inStockOnly} onFilterTextChange={onFilterTextChange} onInStockOnlyChange={onInStockOnlyChange}/>
       <ProductsTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
     </div>
   );

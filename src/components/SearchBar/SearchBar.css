@@ -1,0 +1,33 @@
+.SearchBar {
+    background-color: green;
+    text-align: left;
+}
+
+.SearchBar-text {
+    color: white;
+    margin: 16px 8px;
+}
+
+.SearchBar-input {
+    width: 100%;
+    padding: 8px;
+    margin: 0px 8px;
+}
+
+.SearchBar-checkbox {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.SearchBar-checkbox-input {
+    margin-right: 8px;
+}
+
+.SearchBar-checkbox-text {
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

@@ -46,17 +46,17 @@ const ProductsTable = (props: TableProps) => {
     categories.push(product.category);
   });
 
-  categories.forEach(category => {
-    const productsInCat = products.filter((prod: Product) => prod.category === category);
+  categories.forEach((category, index) => {
+    let productsInCat = products.filter((prod: Product) => prod.category === category);
+    productsInCat = productsInCat.filter((prod: Product) => 
+    prod.name.toLowerCase().startsWith(filterText.toLowerCase()) && 
+    (inStockOnly ? prod.quantity !== 0 : true));
+    if (productsInCat.length === 0) {
+      return;
+    }
     tableContent.push(<ProductsTableHeader title={category} key={category} />)
     tableContent.push(<ProductsTableSubHeader />)
     productsInCat.forEach((prod: Product) => {
-      if (prod.name.indexOf(filterText) === -1) {
-        return;
-      }
-      if (inStockOnly && prod.quantity === 0) {
-        return;
-      }
       tableContent.push(<ProductRow product={prod} key={prod.name}/>)
     })
     if (index !== categories.length-1) { // not last one
