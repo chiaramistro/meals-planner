@@ -1,6 +1,6 @@
 import './SearchBar.css';
 
-const SearchBar = props => {
+const SearchBar = (props: {filterText: string; inStockOnly: boolean;}) => {
   const { filterText, inStockOnly } = props;
 
   return (
