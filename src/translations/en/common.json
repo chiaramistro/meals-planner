@@ -1,0 +1,16 @@
+{
+    "home": {
+        "title": "Welcome to {{appName}}",
+        "italian": "Italian",
+        "english": "English"
+    },
+    "product": {
+        "table": {
+            "name": "Name",
+            "price": "Price"
+        },
+        "search": "Search through your products",
+        "searchPlaceholder": "Search",
+        "filter": "Only show products in stock"
+    }
+}
