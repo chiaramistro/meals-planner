@@ -1,10 +1,13 @@
+.ProductsTable {
+    margin: 8px;
+}
+
 .ProductsTableSubHeader-text {
     font-size: small;
     font-weight: lighter;
 }
 
 .ProductsTable table {
-    margin: 8px;
     padding: 8px; 
     background-color: white;
 }
