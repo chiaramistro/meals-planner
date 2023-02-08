@@ -1,22 +1,16 @@
 import './App.css';
-import GroceryList from './components/GroceryList/GroceryList';
-import GROCERY_LIST from './resources/groceries.json';
-import { useTranslation } from "react-i18next";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
+import NewProductScreen from './screens/NewProductScreen/NewProductScreen';
+
+const Stack = createNativeStackNavigator();
 
 function App() {
-  const [t, i18n] = useTranslation('common');
-
   return (
-    <div className="App">
-      <div className="App-Header-Buttons">
-        <button className="btn" onClick={() => i18n.changeLanguage('it')}>{t('home.italian')}</button>
-        <button className="btn" onClick={() => i18n.changeLanguage('en')}>{t('home.english')}</button>
-      </div>
-      <div className="App-Header-Text">
-          <h1>{t('home.title', {appName: 'Meals Planner'})}</h1>
-      </div>
-     <GroceryList products={GROCERY_LIST} />
-    </div>
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Meals Planner' }}/>
+      <Stack.Screen name="NewProduct" component={NewProductScreen} options={{ title: 'Meals Planner - Add new product' }} />
+    </Stack.Navigator>
   );
 }
 
