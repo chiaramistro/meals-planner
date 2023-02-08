@@ -8,10 +8,12 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="App-Header-Buttons">
+        <button className="btn" onClick={() => i18n.changeLanguage('it')}>{t('home.italian')}</button>
+        <button className="btn" onClick={() => i18n.changeLanguage('en')}>{t('home.english')}</button>
+      </div>
+      <div className="App-Header-Text">
           <h1>{t('home.title', {appName: 'Meals Planner'})}</h1>
-          <button onClick={() => i18n.changeLanguage('it')}>{t('home.italian')}</button>
-          <button onClick={() => i18n.changeLanguage('en')}>{t('home.english')}</button>
       </div>
      <GroceryList products={GROCERY_LIST} />
     </div>

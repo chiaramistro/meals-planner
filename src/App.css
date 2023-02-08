@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.App-Header-Text {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.App-Header-Buttons {
+  display: flex;
+  justify-content: end;
+  padding: 8px;
+}

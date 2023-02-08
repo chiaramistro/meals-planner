@@ -1,11 +1,10 @@
 .SearchBar {
-    background-color: green;
     text-align: left;
 }
 
 .SearchBar-text {
     color: white;
-    margin: 16px 8px;
+    margin: 0px 8px 16px 8px;
 }
 
 .SearchBar-input {
