@@ -4,11 +4,11 @@ import ProductsTable from '../ProductsTable/ProductsTable';
 import { useState } from 'react';
 import { Product } from '../../models/Product';
 
-const GroceryList = (props: {products: Product[]}) => {
+const GroceryList = (props: {products: Product[], onAddNewProduct: Function;}) => {
   const [filterText, setFilterText] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
 
-  const { products } = props;
+  const { products, onAddNewProduct } = props;
   
   const onFilterTextChange = (text: string) => {
     setFilterText(text);
@@ -20,7 +20,7 @@ const GroceryList = (props: {products: Product[]}) => {
 
   return (
     <div className="GroceryList">
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly} onFilterTextChange={onFilterTextChange} onInStockOnlyChange={onInStockOnlyChange}/>
+      <SearchBar filterText={filterText} inStockOnly={inStockOnly} onFilterTextChange={onFilterTextChange} onInStockOnlyChange={onInStockOnlyChange} onAddNewProduct={onAddNewProduct} />
       <ProductsTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
     </div>
   );

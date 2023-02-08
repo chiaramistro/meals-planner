@@ -3,7 +3,11 @@
     margin: 8px;
 }
 
-.SearchBar-text {
+.SearchBar-add {
+    cursor: pointer;
+}
+
+.SearchBar-text, .SearchBar-add-text {
     color: white;
     margin-bottom: 16px;
 }

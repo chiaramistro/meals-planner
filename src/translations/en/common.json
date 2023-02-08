@@ -11,6 +11,7 @@
         },
         "search": "Search through your products",
         "searchPlaceholder": "Search",
-        "filter": "Only show products in stock"
+        "filter": "Only show products in stock",
+        "add": "Add new product"
     }
 }
