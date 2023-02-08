@@ -1,6 +1,7 @@
 import './ProductsTable.css';
 import ProductRow from '../ProductRow/ProductRow';
 import { Product } from '../../models/Product';
+import { useTranslation } from "react-i18next";
 
 const ProductsTableHeader = (props: {title: string}) => {
   const { title } = props;
@@ -13,10 +14,12 @@ const ProductsTableHeader = (props: {title: string}) => {
 }
 
 function ProductsTableSubHeader() {
+  const [t, i18n] = useTranslation('common');
+
   return (
     <tr className="ProductsTableSubHeader">
-      <td align="left"><span className='ProductsTableSubHeader-text'>Name</span></td>
-      <td align="right"><span className='ProductsTableSubHeader-text'>Price</span></td>
+      <td align="left"><span className='ProductsTableSubHeader-text'>{t('product.table.name')}</span></td>
+      <td align="right"><span className='ProductsTableSubHeader-text'>{t('product.table.price')}</span></td>
     </tr>
   );
 }
