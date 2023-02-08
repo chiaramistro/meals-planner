@@ -2,12 +2,14 @@ import './HomeScreen.css';
 import { useTranslation } from "react-i18next";
 import GroceryList from "../../components/GroceryList/GroceryList";
 import GROCERY_LIST from '../../resources/groceries.json';
+import { useNavigate } from "react-router-dom";
 
 function HomeScreen() {
     const [t, i18n] = useTranslation('common');
+    let navigate = useNavigate();
 
-    function onAddNewProduct(product: Product) {
-      props.navigation.navigate('NewProduct')
+    function onAddNewProduct() {
+      navigate('/new-product');
     }
   
     return (
