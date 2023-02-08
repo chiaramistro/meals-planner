@@ -2,14 +2,8 @@ import './HomeScreen.css';
 import { useTranslation } from "react-i18next";
 import GroceryList from "../../components/GroceryList/GroceryList";
 import GROCERY_LIST from '../../resources/groceries.json';
-import { NavigationProp, ParamListBase } from '@react-navigation/native';
-import { Product } from '../../models/Product';
 
-// export interface HomeScreenProps {
-//   navigation: NavigationProp<ParamListBase>
-// };
-
-const HomeScreen = (props: {navigation: NavigationProp<ParamListBase>}) => {
+function HomeScreen() {
     const [t, i18n] = useTranslation('common');
 
     function onAddNewProduct(product: Product) {
