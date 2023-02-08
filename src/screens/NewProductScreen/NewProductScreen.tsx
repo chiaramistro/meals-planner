@@ -2,7 +2,7 @@ import './NewProductScreen.css';
 import { useTranslation } from "react-i18next";
 
 function NewProductScreen() {
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
   
     return (
         <div className="NewProduct">

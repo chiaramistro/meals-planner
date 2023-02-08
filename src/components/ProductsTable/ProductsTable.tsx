@@ -14,7 +14,7 @@ const ProductsTableHeader = (props: {title: string}) => {
 }
 
 function ProductsTableSubHeader() {
-  const [t, i18n] = useTranslation('common');
+  const [t] = useTranslation('common');
 
   return (
     <tr className="ProductsTableSubHeader">
@@ -58,12 +58,12 @@ const ProductsTable = (props: TableProps) => {
       return;
     }
     tableContent.push(<ProductsTableHeader title={category} key={category} />)
-    tableContent.push(<ProductsTableSubHeader />)
+    tableContent.push(<ProductsTableSubHeader key={category} />)
     productsInCat.forEach((prod: Product) => {
       tableContent.push(<ProductRow product={prod} key={prod.name}/>)
     })
     if (index !== categories.length-1) { // not last one
-      tableContent.push(<ProductsTableDivider />)
+      tableContent.push(<ProductsTableDivider key={category} />)
     }
   });
   

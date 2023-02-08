@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const SearchBar = (props: {filterText: string; inStockOnly: boolean; onFilterTextChange: Function; onInStockOnlyChange: Function; onAddNewProduct: Function}) => {
   const { filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange, onAddNewProduct} = props;
-  const [t, i18n] = useTranslation('common');
+  const [t] = useTranslation('common');
   const searchPlaceholder: string = t('product.searchPlaceholder')
 
   function onChangeInput(event: any) {
