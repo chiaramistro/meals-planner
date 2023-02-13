@@ -12,6 +12,9 @@
         "search": "Cerca tra i tuoi prodotti",
         "searchPlaceholder": "Cerca",
         "filter": "Solo prodotti disponibili",
-        "add": "Aggiungi nuovo prodotto"
+        "add": "Aggiungi nuovo prodotto",
+        "new": {
+            "title": "Aggiungi un nuovo prodotto"
+        }
     }
 }

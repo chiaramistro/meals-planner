@@ -18,10 +18,8 @@ function HomeScreen() {
           <button className="btn" onClick={() => i18n.changeLanguage('it')}>{t('home.italian')}</button>
           <button className="btn" onClick={() => i18n.changeLanguage('en')}>{t('home.english')}</button>
         </div>
-        <div className="Home-Header-Text">
-            <h1>{t('home.title', {appName: 'Meals Planner'})}</h1>
-        </div>
-      <GroceryList products={GROCERY_LIST} onAddNewProduct={onAddNewProduct} />
+        <PageTitle title={t('home.title', {appName: 'Meals Planner'})} />
+        <GroceryList products={GROCERY_LIST} onAddNewProduct={onAddNewProduct} />
       </div>
     );
   }

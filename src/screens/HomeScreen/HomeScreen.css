@@ -2,12 +2,6 @@
     text-align: center;
   }
   
-  .Home-Header-Text {
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
-  
   .Home-Header-Buttons {
     display: flex;
     justify-content: end;

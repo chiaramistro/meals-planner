@@ -12,6 +12,9 @@
         "search": "Search through your products",
         "searchPlaceholder": "Search",
         "filter": "Only show products in stock",
-        "add": "Add new product"
+        "add": "Add new product",
+        "new": {
+            "title": "Let's add a new product"
+        }
     }
 }
