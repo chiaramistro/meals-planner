@@ -36,11 +36,12 @@ interface TableProps {
   products: Product[];
   filterText: string;
   inStockOnly: boolean;
+  goToProductDetails: Function;
 }
 
 const ProductsTable = (props: TableProps) => {
 
-  const { products, filterText, inStockOnly } = props;
+  const { products, filterText, inStockOnly, goToProductDetails } = props;
   const tableContent: any[] = [];
   const categories: string[] = [];
 
@@ -60,7 +61,7 @@ const ProductsTable = (props: TableProps) => {
     tableContent.push(<ProductsTableHeader title={category} key={category} />)
     tableContent.push(<ProductsTableSubHeader key={category} />)
     productsInCat.forEach((prod: Product) => {
-      tableContent.push(<ProductRow product={prod} key={prod.name}/>)
+      tableContent.push(<ProductRow product={prod} key={prod.name} goToProductDetails={goToProductDetails}/>)
     })
     if (index !== categories.length-1) { // not last one
       tableContent.push(<ProductsTableDivider key={category} />)
