@@ -1,0 +1,59 @@
+.ProductDetailsCard-Barcode {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* https://boxy-svg.com/ */
+.ProductDetailsCard-Barcode-Img {
+    width: 300px;
+    position: absolute;
+    bottom: -1px;
+    max-height: 120px;
+}
+
+.ProductDetailsCard-Info {
+    padding: 8px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.ProductDetailsCard-Info-Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProductDetailsCard-Info-Main-Name {
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.ProductDetailsCard-Info-Main-Category {
+    margin-top: 16px;
+    padding: 5px 10px;
+    border-radius: 32px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.ProductDetailsCard-Info-Price {
+    text-align: center;
+}
+
+.ProductDetailsCard-Info-Price-OutOfStock {
+    color: red;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.ProductDetailsCard-Info-Price-Text { 
+    letter-spacing: 2px;
+    font-size: 30px;
+}

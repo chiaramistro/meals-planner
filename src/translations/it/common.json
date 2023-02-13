@@ -1,4 +1,6 @@
 {
+    "attention": "Attenzione",
+    "error": "Errore",
     "home": {
         "title": "Benvenuti in {{appName}}",
         "italian": "Italiano",
@@ -15,6 +17,11 @@
         "add": "Aggiungi nuovo prodotto",
         "new": {
             "title": "Aggiungi un nuovo prodotto"
+        },
+        "details": {
+            "notFound": "Nessun prodotto trovato con nome \"{{prodName}}\"",
+            "title": "Alcune informazioni in più sul prodotto...",
+            "outOfStock": "Terminato"
         }
     }
 }

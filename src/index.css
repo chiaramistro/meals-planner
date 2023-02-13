@@ -24,3 +24,14 @@ code {
   border-radius: 8px;
   box-shadow: 8px 1px 20px black;
 }
+
+.card {
+  margin-top: 24px;
+  background-color: white;
+  min-height: 200px;
+  min-width: 400px;
+  height: 320px;
+  width: 500px;
+  position: relative;
+  border-radius: 32px;
+}

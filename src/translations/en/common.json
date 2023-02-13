@@ -1,4 +1,6 @@
 {
+    "attention": "Attention",
+    "error": "Error",
     "home": {
         "title": "Welcome to {{appName}}",
         "italian": "Italian",
@@ -15,6 +17,11 @@
         "add": "Add new product",
         "new": {
             "title": "Let's add a new product"
+        },
+        "details": {
+            "notFound": "No product found with name \"{{prodName}}\"",
+            "title": "Some additional info about your product...",
+            "outOfStock": "Out of stock"
         }
     }
 }
