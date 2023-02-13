@@ -5,7 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ProductDetailsScreen from './screens/ProductDetailsScreen/NewProductScreen';
+import ProductDetailsScreen from './screens/ProductDetailsScreen/ProductDetailsScreen';
 
 function App() {
   return (
